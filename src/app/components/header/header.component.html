@@ -1,0 +1,38 @@
+<header class="header">
+  <div class="container-header">
+    <img src="./assets/logo.png" alt="Kosten Logo" />
+    <nav class="nav-header">
+      <ul class="container-menu">
+        @if (isAuthenticated()) {
+          <li *hasRole="[Role.ADMIN]">
+            <p class="link-header">Admin</p>
+          </li>
+          <li *hasRole="[Role.SUPER_ADMIN]">
+            <p class="link-header">Super Admin</p>
+          </li>
+          <li *hasRole="[Role.USER]">
+            <p class="link-header">User</p>
+          </li>
+          <li *hasRole="[Role.USER, Role.SUPER_ADMIN]">
+            <p class="link-header">(User+Super)</p>
+          </li>
+          <li>
+            <p (click)="logout()" class="link-header">Logout</p>
+          </li>
+        } @else {
+          <li>
+            <p (click)="navigateToLogin()" class="link-header">Sign In</p>
+          </li>
+          <li>
+            <button
+              (click)="navigateToRegister()"
+              class="link-header button-register"
+            >
+              Sign Up
+            </button>
+          </li>
+        }
+      </ul>
+    </nav>
+  </div>
+</header>

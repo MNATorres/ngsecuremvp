@@ -1,0 +1,79 @@
+@use "./../../../variables.scss" as *;
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 200px); /* Se adapta sin generar scroll */
+  padding: 20px; /* Agrega espacio para evitar que el header lo cubra */
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.register-form {
+  background: $background-secondary;
+  padding: 0 2rem 1rem;
+  border-radius: 10px;
+  box-shadow: $shadow;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+
+  @include respond-to(md) {
+    padding: 1rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-container h2 {
+  margin-bottom: 1rem;
+}
+
+.form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background: #2c2c2c;
+  color: white;
+  margin-bottom: 0;
+}
+
+.form input::placeholder {
+  color: #bbb;
+}
+
+.register-container button {
+  padding: 10px;
+  background: $background-tertiary;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 15px;
+}
+
+.register-container button:hover {
+  background: #185aa0;
+}
+
+.error-message {
+  color: $warn;
+}
+
+.form-group {
+  text-align: start;
+  margin-bottom: 7px;
+}
+
+small {
+  color: $warn;
+  padding: 5px;
+}

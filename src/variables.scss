@@ -1,0 +1,36 @@
+$primary-color-text: #fff;
+$secondary-color-text: #fff;
+$background-button: linear-gradient(135deg, #555, #333);
+$background-primary: #212121;
+$background-secondary: #171717;
+$background-tertiary: #3579a3;
+$warn: tomato;
+$shadow: 0 1px 4px rgb(255 255 255 / 35%);
+$soft-gray: #acacac;
+
+// Definición de breakpoints
+$breakpoint-sm: 480px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+// Mixin para media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+}

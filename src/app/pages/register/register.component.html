@@ -1,0 +1,79 @@
+<div class="register-container">
+  <div class="register-form">
+    <h2>Register</h2>
+
+    <form class="form" [formGroup]="loginForm" (ngSubmit)="signUp()">
+      <div class="form-group">
+        <label for="username">Username</label>
+        @if (hasError("username", "required")) {
+          <small>*</small>
+        }
+        <input
+          id="username"
+          type="text"
+          placeholder="User"
+          formControlName="username"
+          autocomplete="name"
+        />
+        @if (hasError("username", "minlength")) {
+          <small>* Debe tener al menos 3 caracteres.</small>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        @if (hasError("email", "required")) {
+          <small>*</small>
+        }
+        <input
+          id="email"
+          type="email"
+          placeholder="Email"
+          formControlName="email"
+          autocomplete="email"
+        />
+        @if (hasError("email", "email")) {
+          <small>* Formato de email inválido.</small>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        @if (hasError("password", "required")) {
+          <small>*</small>
+        }
+        <input
+          id="password"
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+          autocomplete="new-password"
+        />
+
+        @if (hasError("password", "minlength")) {
+          <small>* Debe tener al menos 4 caracteres.</small>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        @if (hasError("confirmPassword", "required")) {
+          <small>*</small>
+        }
+        <input
+          id="confirmPassword"
+          type="password"
+          placeholder="Confirm Password"
+          formControlName="confirmPassword"
+          autocomplete="new-password"
+        />
+
+        @if (loginForm.hasError("mismatch")) {
+          <small>* Las contraseñas no coinciden.</small>
+        }
+      </div>
+
+      <button type="submit" [disabled]="loginForm.invalid">Sign Up</button>
+    </form>
+  </div>
+</div>
