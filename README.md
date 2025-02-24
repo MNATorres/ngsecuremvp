@@ -4,6 +4,14 @@
 
 This is a Angular 19 project providing a solid foundation for an MVP (Minimum Viable Product). It includes essential features for authentication, protected routes, and dynamic rendering.
 
+## Prerequisites
+
+Make sure you have the following versions installed before running the project:
+
+- **Node.js**: v22.11.0
+- **npm**: v10.9.0
+- **Angular CLI**: 19.1.7
+
 ## Features
 
 ✅ **Angular 19**: Built with the latest version of Angular for optimal performance and maintainability.
@@ -20,10 +28,11 @@ This is a Angular 19 project providing a solid foundation for an MVP (Minimum Vi
 
 📡 **HTTP Interceptor**: Custom interceptor to manage API requests, handle errors, and append headers.
 
-## Prerequisites
+## 🔐 Authentication System
 
-Make sure you have the following versions installed before running the project:
+Includes a fully functional Login and Sign Up system.
 
-- **Node.js**: v22.11.0
-- **npm**: v10.9.0
-- **Angular CLI**: 19.1.7
+### 🧑‍💻 Test Credentials:
+
+- **Username**: `emilys`
+- **Password**: `emilyspass`
