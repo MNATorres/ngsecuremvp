@@ -20,6 +20,11 @@ Make sure you have the following versions installed before running the project:
 
 🛡️ **Protected Routes**: Implements route protection using Guards to restrict access to authenticated users.
 
+🎭 **Role Management**: Supports multiple roles with different levels of access:
+- **Admin**
+- **Super Admin**
+- **User**: Limited access to user-specific resources.
+
 🎨 **Angular Material**: Utilizes Angular Material for modern and responsive UI components.
 
 🧱 **Custom Decorators**: Implements decorators to enable conditional rendering based on user roles or permissions.
